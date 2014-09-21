@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CheckMark - Trademark Management Platform</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<style>
+		body {
+		  min-height: 2000px;
+		  padding-top: 70px;
+		}
+	</style>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-check"></span>CheckMark</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="alerts.html">Alerts</a></li>
+            <li><a href="#contact">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">USPTO</a></li>
+                <li><a href="#">State Trademarks</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tools</li>
+                <li><a href="#">TESS</a></li>
+                <li><a href="#">TMOG</a></li>
+                <li><a href="#">TSDR</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="well">
+        <h2><span class="glyphicon glyphicon-check"></span>CheckMark</h2>
+        <p>Smarter way for to clear your mark. Get started by typing in a search term below </p>
+        <br/>
+			<form class="form-inline" role="form" method="get">
+			  <div class="form-group">
+			    <label class="sr-only" for="searchTerm">Search</label>
+			    <input type="search" class="form-control input-lg" id="searchquery" name="searchquery" size=80 value="<%=@userquery%>" placeholder="Enter search query">
+			  </div>
+			  <button type="submit" class="btn btn-primary input-lg">Search</button>
+			</form>
+        </p>
+      </div>
+
+<%if @another_items %>
+  <table class="table table-hover table-striped">
+      <tbody>
+      <% @another_items.each do |tr| %>
+      <tr class="tm_row">
+	  	<td><span class="glyphicon glyphicon-floppy-disk"></span> <%= tr[:rownum] %></td>
+	  	<td><a href="<%= tr[:detailurl] %>"><img src="<%= tr[:imgurl]=%>" width=200/</a></td>
+	    <td><%= tr[:name] %><br>
+	    <%= tr[:gs] %><br>
+	    <b>sn:</b> <%= tr[:sn] %> <b>reg:</b> <%= tr[:reg_num] %> <br> 
+	    <b>filing date:</b> <%= tr[:filing_date] %> <b>reg date:</b> <%= tr[:reg_date] %> <br>
+		<b>owner:</b> <%= tr[:owner] %>  <b>office action:</b> <%= tr[:office_action]%>  <br> 
+		<b>class:</b> <%= tr[:class_list] %> <br>
+		<b>disclaimer:</b> <%= tr[:disclaimer] %> 
+		</td>
+	  </tr>
+	  <% end %>
+      </tbody>
+  </table>
+<%end%>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

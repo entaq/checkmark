@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CheckMark - Trademark Management Platform</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<style>
+		body {
+		  min-height: 2000px;
+		  padding-top: 70px;
+		}
+	</style>
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-check"></span>CheckMark</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#about">Alerts</a></li>
+            <li><a href="#contact">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">USPTO</a></li>
+                <li><a href="#">State Trademarks</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tools</li>
+                <li><a href="#">TESS</a></li>
+                <li><a href="#">TMOG</a></li>
+                <li><a href="#">TSDR</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="well">
+        <h2><span class="glyphicon glyphicon-check"></span>CheckMark</h2>
+        <p>Setup alerts for marks of you need to know. We'll email you as soon as we know.</p>
+        <br/>
+			<form class="form" role="form" method="post">
+      	<div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" i placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Mark</label>
+          <input type="text" class="form-control"  placeholder="Keyword to watch">
+        </div>
+         <div class="form-group">
+          <label for="exampleInputPassword1">Owner</label>
+          <input type="text" class="form-control"  placeholder="Person/Company to watch">
+        </div>
+         <div class="form-group">
+          <label for="exampleInputPassword1">Goods</label>
+          <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">001 - Chemicals</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">002 - Paints</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">003 - Cosmetics</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">008 - Hand Tools</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">020 - Furniture and Articles Not Otherwise Classified</a></li>
+          </ul>
+        </div>        
+      </div>
+         <div class="form-group">
+          <label for="exampleInputPassword1">Service</label>
+          <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">035 - Advertising and Business</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">039 - Transportation and Storage</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">044 - Medical, Beauty and Agricultural</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">045 - Personal</a></li>
+            
+          </ul>
+        </div>
+        </div>
+        <br>
+			  <button type="submit" class="btn btn-primary input-lg">Subscribe</button>
+			</form>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
